@@ -12,6 +12,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/restaurants">Yelp app</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active pe-3"><%= link_to "List", restaurants_path, class:"text-decoration-none" %></li>
+          <br>
+          <li class="nav-item active"><%= link_to "Add", new_restaurant_path, class:"nav-item text-decoration-none" %></li>
+        </ul>
+        </div>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>
